@@ -9,3 +9,4 @@ Designed and tested in Altera Quartus II
   - Basic Arithmetic Operations (Add, Sub, Div, Mult)
   - Basic Logic Operations (And, Or, Not, Shift)
 - Instructions accessed from 512 word x 32 bit RAM unit
+- Control Unit Capable of performing Load, Store, and Branch Operations
