@@ -1,0 +1,12 @@
+library ieee;
+use ieee.std_logic.all;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.All;
+use work.components.all;
+
+entity booth_tb is
+	port (
+		multiplicand, multiplier : in STD_logic_vector (31 downto 0);
+		result: out Std_logic_vector (63 downto 0);
+	);
+	end entity;

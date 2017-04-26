@@ -1,0 +1,4 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY bit32_reg IS

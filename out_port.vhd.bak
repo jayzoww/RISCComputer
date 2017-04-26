@@ -1,0 +1,15 @@
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity out_port is 
+Port (
+		clr, clk, en : in std_logic;
+		DataFromBus : in std_logic_vector(31 downto 0);
+		output : out std_logic_vector (31 downto 0)
+		);
+end entity;
+Architecture out_port_arch of out_port is
+process (clk, en, clr)
+
+end architecture;

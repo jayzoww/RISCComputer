@@ -1,0 +1,11 @@
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity sel_encode is
+Port (
+		Gra, Grb, Grc : in std_logic_vector (3 downto 0);
+		Rout, Rin, BAout : in std_logic;
+		
+	);
+end entity;

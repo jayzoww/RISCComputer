@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="phase1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|RAM:RAM_UNIT|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7si1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|Add_Sub:SigAdd|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_ufg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|Add_Sub:SigPCinc|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_ufg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|Shift:SigSHL|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_vjc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|Add_Sub:SigSub|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_ufg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|Rotate:SigROL|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_jhc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|Rotate:SigROR|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_jhc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|div:SigDiv|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_hjp.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|alu:DP_ALU|Shift:SigSHR|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_vjc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

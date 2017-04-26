@@ -1,0 +1,83 @@
+library ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.All;
+
+entity alu_tb IS
+
+end;
+
+ARCHITECTURE alu_tb_arch OF alu_tb IS
+
+	SIGNAL tb_Add, tb_Sub, tb_And, tb_Or, tb_Not, tb_Booth, tb_Div, tb_Neg, tb_Shr, tb_Shl, tb_Ror, tb_Rol: STD_LOGIC;
+	SIGNAL tb_inA, tb_inB : STD_LOGIC_VECTOR (31 downto 0);
+	SIGNAL tb_Cout : STD_LOGIC_VECTOR (63 downto 0);
+
+
+COMPONENT alu 
+PORT (
+		OPAdd, OPSub, OPAnd, OPOr, OPNot, OPBooth, OPDiv, OPNeg, OPShr, OPShl, OPRor, OPRol: IN STD_LOGIC;
+		inA : IN STD_LOGIC_VECTOR (31 downto 0);
+		inB : IN STD_LOGIC_VECTOR (31 downto 0);
+		C_Out : OUT STD_LOGIC_VECTOR (63 downto 0)
+);
+end component alu;
+
+begin 
+DUT: alu
+
+PORT MAP (
+	OPAdd	 => tb_Add, 
+	OPSub	 => tb_Sub, 
+	OPAnd	 => tb_And, 
+	OPOr	 => tb_Or, 
+	OPNot	 => tb_Not, 
+	OPBooth=> tb_Booth, 
+	OPDiv	 => tb_Div, 
+	OPNeg	 => tb_Neg, 
+	OPShr	 => tb_Shr, 
+	OPShl	 => tb_Shl, 
+	OPRor	 => tb_Ror, 
+	OPRol	 => tb_Rol,
+	inA	 => tb_inA, 
+	inB	 => tb_inB, 
+	C_Out  => tb_Cout
+);
+
+process 
+	begin 
+		wait for 20 ns;
+		tb_Add <= '1';
+		tb_inA <= x"00000007";
+		tb_inB <= x"00000001";
+		wait for 20 ns;
+		tb_Add <= '0';
+		tb_Shl <= '1';
+		tb_inA <= x"00000004";
+		tb_inB <= x"00000002";
+		wait for 20 ns;
+		tb_Shl <= '0';
+		tb_Rol <= '1';
+		tb_inA <= x"00000004";
+		tb_inB <= x"80000002";
+		wait for 20 ns;
+		tb_Rol <= '0';
+		tb_Neg <= '1';
+		tb_inA <= x"00000044";
+		tb_inB <= x"00000002";
+		wait for 20 ns;
+		tb_Neg <= '0';
+		tb_And <= '1';
+		tb_inA <= x"00000044";
+		tb_inB <= x"00000012";
+		wait for 20 ns;
+		tb_And <= '0';
+		tb_Or <= '1';
+		tb_inA <= x"00000044";
+		tb_inB <= x"00000102";
+		wait for 20 ns;
+		tb_Or <= '0';
+		tb_Div <= '1';
+		tb_inA <= x"00000044";
+		tb_inB <= x"00000002";
+	end process;
+end test_arch;

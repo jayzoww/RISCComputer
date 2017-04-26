@@ -1,0 +1,21 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.std_logic.all;
+USE ieee.std_logic_unsigned.All;
+USE work.my_components.all;
+
+
+entity control_unit is
+
+
+
+end entity;
+
+Architecture control_unit_arch of control_unit is
+Begin
+
+
+
+
+
+end architecture;

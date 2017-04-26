@@ -1,0 +1,16 @@
+library ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.All;
+
+entity datapath is
+	port map( 
+		
+		);
+		
+end entity;
+
+architecture datapath_arch of datapath is
+begin
+
+end architecture;
+	
